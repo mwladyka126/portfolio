@@ -1,0 +1,48 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
+
+.root {
+  background-color: $color-background-light;
+  .container {
+    @include wrapper;
+    position: relative;
+    .logo {
+      padding: $base-size $base-size * 2;
+      position: relative;
+      .link {
+        @include link;
+        color: $color-text-dark;
+        font-size: large;
+        font-weight: 600;
+        border: solid $color-yellow 5px;
+        padding: $base-size;
+        &:hover {
+          top: -10%;
+          left: 50%;
+          transform: rotate(360deg);
+          position: absolute;
+          transition: all 0.9s ease-in-out 0s;
+        }
+      }
+    }
+    .navigation {
+      ul {
+        list-style-type: none;
+        padding: $base-size;
+        @include wrapper;
+        li {
+          padding: $base-size;
+          .link {
+            @include link;
+            color: $color-text-dark;
+            font-size: large;
+            font-weight: 600;
+            &:hover {
+              border-bottom: solid $color-yellow 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

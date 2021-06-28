@@ -1,0 +1,7 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
+
+.root {
+  border: solid $color-yellow 5px;
+  min-height: 100vh;
+}
