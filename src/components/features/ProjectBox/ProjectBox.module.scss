@@ -4,14 +4,24 @@
 .root {
   .project {
     padding: $base-size;
+    margin: $base-size * 2;
     &__imageWrapper {
+      padding: $base-size;
       .image {
         @include image;
-        height: 40vh;
+        height: 50vh;
+        &:hover {
+        }
       }
     }
     &__description {
       flex-direction: column;
+      padding: $base-size;
+      .icon {
+        max-width: 50px;
+        max-height: 50px;
+        color: red;
+      }
     }
   }
 }
