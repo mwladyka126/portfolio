@@ -1,0 +1,17 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
+
+.root {
+  .project {
+    padding: $base-size;
+    &__imageWrapper {
+      .image {
+        @include image;
+        height: 40vh;
+      }
+    }
+    &__description {
+      flex-direction: column;
+    }
+  }
+}

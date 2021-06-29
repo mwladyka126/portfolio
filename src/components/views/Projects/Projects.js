@@ -1,37 +1,40 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import clsx from 'clsx';
+import { ProjectBox } from "../../features/ProjectBox/ProjectBox";
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import clsx from "clsx";
 
-import styles from './Projects.module.scss';
+import { connect } from "react-redux";
+import { getAllProjects } from "../../../redux/projectsRedux.js";
 
-const Component = ({className, children}) => (
+import styles from "./Projects.module.scss";
+
+const Component = ({ className, projects }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Projects</h2>
-    {children}
+    {projects.map((project) => (
+      <ProjectBox
+        key={project.id}
+        title={project.title}
+        description={project.description}
+        technologies={project.technologies}
+        code={project.code}
+        link={project.link}
+        image={project.image}
+      />
+    ))}
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  projects: PropTypes.array,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = (state) => ({
+  projects: getAllProjects(state),
+});
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
+const Container = connect(mapStateToProps)(Component);
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
-export {
-  Component as Projects,
-  // Container as Projects,
-  Component as ProjectsComponent,
-};
+export { Container as Projects, Component as ProjectsComponent };
