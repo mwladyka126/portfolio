@@ -2,15 +2,59 @@
 @import "../../../styles/mixins.scss";
 
 .root {
+  margin: $base-size * 2;
   .project {
     padding: $base-size;
-    margin: $base-size * 2;
     &__imageWrapper {
       padding: $base-size;
+      position: relative;
       .image {
         @include image;
         height: 50vh;
-        &:hover {
+        opacity: 1;
+        display: block;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+      .buttons {
+        @include wrapper;
+        justify-content: center;
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        .button {
+          height: 50px;
+          min-width: 100px;
+          margin: $base-size;
+          font-weight: 400;
+          background-color: $color-yellow;
+          .iconWrapper {
+            @include wrapper;
+            text-decoration: none;
+            font-weight: 400;
+            color: black;
+            p {
+              color: darkcyan;
+            }
+            .icon {
+              max-width: 40px;
+              max-height: 40px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .image {
+          opacity: 0.5;
+        }
+        .buttons {
+          opacity: 1;
         }
       }
     }
@@ -18,9 +62,12 @@
       flex-direction: column;
       padding: $base-size;
       .icon {
-        max-width: 50px;
-        max-height: 50px;
-        color: red;
+        max-width: 40px;
+        max-height: 40px;
+        //  fill: red;
+      }
+      .color {
+        // fill: red;
       }
     }
   }

@@ -6,6 +6,7 @@
   .container {
     @include wrapper;
     position: relative;
+    @include container;
     .logo {
       padding: $base-size $base-size * 2;
       position: relative;

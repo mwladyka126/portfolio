@@ -1,0 +1,14 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .icon {
+    max-width: 50px;
+    max-height: 50px;
+    filter: grayscale(85%);
+    &:hover {
+      filter: grayscale(0%);
+      transform: scale(1.5);
+      transition: $transition;
+    }
+  }
+}

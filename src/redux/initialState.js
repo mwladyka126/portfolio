@@ -1,5 +1,3 @@
-import { Description } from "@material-ui/icons";
-
 export const initialState = {
   projects: {
     data: [
@@ -9,7 +7,7 @@ export const initialState = {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
         technologies:
-          "React, React-Router, Redux, Redux-Thunk, Axios, Express, MongoDB, Mongoose",
+          "HTML, CSS, SASS, JS, React, React-Router, Redux, Redux-Thunk, Axios, Material UI, Express Node, MongoDB, Mongoose",
         code: "https://github.com/mwladyka126/REALMexico",
         link: "https://realmexico.herokuapp.com/",
         image: "/images/projects/realmex.jpg",
@@ -21,7 +19,7 @@ export const initialState = {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
         technologies:
-          "React, React-Router, Redux, Redux-Thunk, Axios, Express, MongoDB, Mongoose",
+          " HTML, CSS, SASS, JS, React, React-Router, Redux, Redux-Thunk, Axios, Material UI Express Node, MongoDB, Mongoose",
         code: "https://github.com/mwladyka126/bulletinBoard",
         link: "https://room-for-you.herokuapp.com/",
         image: "/images/projects/roomforyou.jpg",
@@ -31,7 +29,7 @@ export const initialState = {
         title: "Furniture shop",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-        technologies: "React, React-Router, Redux",
+        technologies: "HTML, CSS, SASS, JS, React, React-Router, Redux",
         code: "https://github.com/mwladyka126/wdp-furniture-shop",
         link: "",
         image: "/images/projects/bazar.jpg",
@@ -42,7 +40,7 @@ export const initialState = {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
         technologies:
-          "React, React-Router, Redux, Redux-Thunk, Axios, Websockets,Express, MongoDB, Mongoose",
+          " HTML, CSS, SASS, JS, React, React-Router, Redux, Redux-Thunk, Axios, WebSocket, Express Node, MongoDB, Mongoose",
         code: "https://github.com/mwladyka126/MusicFestivalApp",
         link: "https://evening-depths-87320.herokuapp.com/",
         image: "/images/projects/festival.jpg",
@@ -52,7 +50,7 @@ export const initialState = {
         title: "Around the world",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-        technologies: "React, React-Router, Redux",
+        technologies: " HTML, CSS, SASS, JS, React, React-Router, Redux",
         code: "https://github.com/mwladyka126/around-the-world",
         link: "https://travel-to-discover.herokuapp.com/",
         image: "/images/projects/aroundtheworld.jpg",
