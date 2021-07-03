@@ -13,6 +13,7 @@ import { store } from "./redux/store";
 
 import { MainLayout } from "./components/layout/MainLayout/MainLayout";
 import { Homepage } from "./components/views/Homepage/Homepage";
+import { About } from "./components/views/About/About";
 import { Projects } from "./components/views/Projects/Projects";
 import { NotFound } from "./components/views/NotFound/NotFound";
 
@@ -32,6 +33,7 @@ const App = () => (
             <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/projects" component={Projects} />
+              <Route exact path="/about" component={About} />
               <Route path="*" component={NotFound} />
             </Switch>
           </MainLayout>
