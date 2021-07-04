@@ -1,19 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Technologies } from "./../../features/Technologies/Technologies";
-
 import clsx from "clsx";
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from "./Homepage.module.scss";
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
-    {children}
-    <Technologies />
+    <div className={styles.container}>
+      {" "}
+      <h1>Hello world :),</h1>
+      <h1>
+        {" "}
+        I'm <span className={styles.name}> Małgorzata Władyka</span>
+        .replace(/ł/g,l)
+      </h1>
+      <p>// about me in 3 words: </p>
+      <h1> I'm junior web developer.</h1>
+    </div>
   </div>
 );
 
@@ -22,18 +25,4 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
-export {
-  Component as Homepage,
-  // Container as Homepage,
-  Component as HomepageComponent,
-};
+export { Component as Homepage, Component as HomepageComponent };

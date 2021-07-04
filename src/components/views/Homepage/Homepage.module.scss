@@ -1,4 +1,16 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
+@import "../../../styles/mixins.scss";
 
-// .root {
-// }
+.root {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  padding: $base-size;
+  min-height: 70vh;
+  .container {
+    @include wrapper;
+    flex-direction: column;
+    .name {
+      color: $color-orange;
+    }
+  }
+}

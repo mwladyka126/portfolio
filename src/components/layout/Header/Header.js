@@ -1,44 +1,124 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import clsx from "clsx";
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
 import styles from "./Header.module.scss";
 
-const Component = ({ className, children }) => (
-  <div className={clsx(className, styles.root)}>
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <Link to={"/"} className={styles.link}>
-          mw
-        </Link>
+const Component = ({ className, children }) => {
+  const [menu, setMenu] = useState(false);
+  const showMenu = () => setMenu(!menu);
+  return (
+    <div className={clsx(className, styles.root)}>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <Link to={"/"} className={styles.link}>
+            mw
+          </Link>
+        </div>
+        <div className={styles.navigation + " " + styles.menuBig}>
+          <ul className={styles.navigation_list}>
+            <li>
+              <Link to={"/projects/"} className={styles.link}>
+                .projects( )
+              </Link>
+            </li>
+            <li>
+              <Link to={"/about/"} className={styles.link}>
+                .about('me')
+              </Link>
+            </li>
+            <li>
+              <a
+                href="mailto:mwladyka126@gmail.com"
+                target="_blanket"
+                className={styles.link}
+              >
+                .contact( )
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/mwladyka126"
+                target="_blanket"
+                className={styles.icon}
+              >
+                {" "}
+                <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/malgorzata-wladyka/"
+                target="_blanket"
+                className={styles.icon}
+              >
+                {" "}
+                <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.hamburger}>
+          <FontAwesomeIcon
+            onClick={showMenu}
+            className={styles.icon}
+            icon={faBars}
+          >
+            x
+          </FontAwesomeIcon>
+        </div>
       </div>
-      <div className={styles.navigation}>
-        <ul>
+      {menu ? (
+        <ul className={styles.menuSmall}>
           <li>
             <Link to={"/projects/"} className={styles.link}>
-              Projects
+              .projects( )
             </Link>
           </li>
           <li>
             <Link to={"/about/"} className={styles.link}>
-              About me
+              .about('me')
             </Link>
           </li>
           <li>
-            <Link to={"/contact/"} className={styles.link}>
-              Contact
-            </Link>
+            <a
+              href="mailto:mwladyka126@gmail.com"
+              target="_blanket"
+              className={styles.link}
+            >
+              .contact( )
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/mwladyka126"
+              target="_blanket"
+              className={styles.icon}
+            >
+              {" "}
+              <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/malgorzata-wladyka/"
+              target="_blanket"
+              className={styles.icon}
+            >
+              {" "}
+              <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+            </a>
           </li>
         </ul>
-      </div>
+      ) : null}
     </div>
-  </div>
-);
+  );
+};
 
 Component.propTypes = {
   children: PropTypes.node,

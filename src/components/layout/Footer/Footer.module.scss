@@ -2,12 +2,32 @@
 @import "../../../styles/mixins.scss";
 
 .root {
-  background-color: $color-background-light;
+  background-color: $color-background-dark;
   font-family: $font-text;
+  color: $color-text-light;
   .footer {
     @include container;
   }
   .copyright {
     text-align: center;
+    @include wrapper;
+    justify-content: center;
+    .iconWrapper {
+      padding: 0 $base-size;
+      .icon {
+        font-size: large;
+        color: $color-main;
+        &:hover {
+          transform: scale(1.5);
+          transition: $transition;
+          color: $color-text-light;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .iconWrapper {
+    padding: 0;
   }
 }

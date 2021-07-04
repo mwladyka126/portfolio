@@ -3,10 +3,12 @@
 
 .root {
   margin: $base-size * 2;
+  background-color: $color-background-dark;
+  font-size: 14px;
   .project {
     padding: $base-size;
-    //  background-color: $color-orange;
-
+    background-color: $color-background-dark;
+    color: $color-text-light;
     &__imageWrapper {
       padding: $base-size;
       position: relative;
@@ -17,6 +19,7 @@
         display: block;
         transition: 0.5s ease;
         backface-visibility: hidden;
+        border-radius: 10%;
       }
       .buttons {
         @include wrapper;
@@ -30,22 +33,19 @@
         -ms-transform: translate(-50%, -50%);
         text-align: center;
         .button {
-          height: 50px;
+          height: 45px;
           min-width: 100px;
           margin: $base-size;
           font-weight: 400;
-          background-color: $color-yellow;
+          background-color: $color-main;
           .iconWrapper {
             @include wrapper;
             text-decoration: none;
-            font-weight: 400;
-            color: black;
-            p {
-              color: darkcyan;
-            }
+            font-weight: 600;
+            color: $color-background-light;
             .icon {
-              max-width: 40px;
-              max-height: 40px;
+              font-size: $base-size * 2;
+              margin-left: 5px;
             }
           }
         }
@@ -63,13 +63,9 @@
     &__description {
       flex-direction: column;
       padding: $base-size;
-      .icon {
-        max-width: 40px;
-        max-height: 40px;
-        //  fill: red;
-      }
-      .color {
-        // fill: red;
+      text-align: justify;
+      h3 {
+        color: $color-main;
       }
     }
   }

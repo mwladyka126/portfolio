@@ -1,4 +1,7 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
-// .root {
-// }
+.root {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  padding: $base-size;
+}

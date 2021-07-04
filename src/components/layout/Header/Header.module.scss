@@ -2,7 +2,8 @@
 @import "../../../styles/mixins.scss";
 
 .root {
-  background-color: $color-background-light;
+  background-color: $color-background-dark;
+  color: $color-text-light;
   .container {
     @include wrapper;
     position: relative;
@@ -12,10 +13,10 @@
       position: relative;
       .link {
         @include link;
-        color: $color-text-dark;
+        color: $color-text-light;
         font-size: large;
         font-weight: 600;
-        border: solid $color-yellow 5px;
+        border: solid $color-main 5px;
         padding: $base-size;
         &:hover {
           top: -10%;
@@ -27,7 +28,7 @@
       }
     }
     .navigation {
-      ul {
+      &_list {
         list-style-type: none;
         padding: $base-size;
         @include wrapper;
@@ -35,15 +36,44 @@
           padding: $base-size;
           .link {
             @include link;
-            color: $color-text-dark;
+            color: $color-text-light;
             font-size: large;
             font-weight: 600;
             &:hover {
-              border-bottom: solid $color-yellow 3px;
+              border-bottom: solid $color-main 3px;
+            }
+          }
+          .icon {
+            @extend .link;
+            color: $color-main;
+            &:hover {
+              border-bottom: none;
+              transform: scale(1.5);
+              transition: $transition;
+              color: $color-text-light;
             }
           }
         }
       }
     }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
+.menuSmall {
+  display: none;
+  @extend .navigation_list;
+}
+@media (max-width: 912px) {
+  .menuBig {
+    display: none;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .menuSmall {
+    display: block !important;
   }
 }
