@@ -5,12 +5,60 @@
   background-color: $color-background-dark;
   color: $color-text-light;
   padding: $base-size;
-  // min-height: 70vh;
   .container {
-    @include wrapper;
+    padding: $base-size * 2.3 $base-size;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    .name {
-      color: $color-orange;
+    font-size: 20px;
+    font-family: monospace;
+    .hello {
+      text-shadow: 6px 6px 6px $color-main;
+    }
+    .me {
+      .name {
+        color: $color-main;
+      }
+    }
+    .comment {
+      color: $color-main;
+    }
+    .info {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      border-right: 0.15em solid $color-main;
+      animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+    }
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $color-main;
+  }
+}
+@media (max-width: 585px) {
+  .container {
+    font-size: 15px !important;
+    .info {
+      animation: none !important;
+      white-space: normal !important;
+      border: none !important;
     }
   }
 }
