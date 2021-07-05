@@ -5,7 +5,7 @@
   background-color: $color-background-dark;
   color: $color-text-light;
   padding: $base-size;
-  min-height: 70vh;
+  // min-height: 70vh;
   .container {
     @include wrapper;
     flex-direction: column;

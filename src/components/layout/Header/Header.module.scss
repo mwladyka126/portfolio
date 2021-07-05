@@ -27,35 +27,6 @@
         }
       }
     }
-    .navigation {
-      &_list {
-        list-style-type: none;
-        padding: $base-size;
-        @include wrapper;
-        li {
-          padding: $base-size;
-          .link {
-            @include link;
-            color: $color-text-light;
-            font-size: large;
-            font-weight: 600;
-            &:hover {
-              border-bottom: solid $color-main 3px;
-            }
-          }
-          .icon {
-            @extend .link;
-            color: $color-main;
-            &:hover {
-              border-bottom: none;
-              transform: scale(1.5);
-              transition: $transition;
-              color: $color-text-light;
-            }
-          }
-        }
-      }
-    }
 
     .hamburger {
       display: none;
@@ -64,14 +35,19 @@
 }
 .menuSmall {
   display: none;
-  @extend .navigation_list;
+  flex-direction: column !important;
+  margin-bottom: 0;
 }
-@media (max-width: 912px) {
+@media (max-width: 585px) {
   .menuBig {
     display: none;
   }
   .hamburger {
     display: block !important;
+    padding: $base-size;
+    .icon {
+      font-size: $base-size * 2;
+    }
   }
   .menuSmall {
     display: block !important;
