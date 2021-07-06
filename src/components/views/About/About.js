@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Technologies } from "./../../features/Technologies/Technologies";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 import clsx from "clsx";
 
@@ -11,26 +15,82 @@ import styles from "./About.module.scss";
 
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>About me:</h2>
-    <p>
-      {" "}
-      I am lawyer by training and junior web developer by passion,
-      systematically programming, on both front- and back-end stack since 2020.
-      For a long time I’ve been fascinated by the endless possibilities of the
-      IT world, dipping my toes into office software applications in the roles
-      of a tester, which ignited my passion for the field. Last year, I began a
-      nine-month-long Web Development Bootcamp, a very intense and
-      practice-oriented course that equipped me with essential knowledge to
-      start my new journey. I'm an ambitious, highly motivated and hard-working
-      person, eager to learn new technologies and open to new challenges.
-      Through my previous work experience, I proved myself to be a reliable,
-      well-organized and stress-resistant team-player with strong interpersonal
-      skills. I’d be happy to use all my assets in the role of a junior
-      programmer.
-    </p>
-    <p> See my github:</p>
-    <p> More on linkedIn:</p>
+    <div className={styles.intro}>
+      <h2>About me:</h2>
+      <p>
+        {" "}
+        I am lawyer by training and junior web developer by passion,
+        systematically programming, on both front- and back-end stack since
+        2020. For a long time I’ve been fascinated by the endless possibilities
+        of the IT world, dipping my toes into office software applications in
+        the roles of a tester, which ignited my passion for the field. Last
+        year, I began a nine-month-long Web Development Bootcamp, a very intense
+        and practice-oriented course that equipped me with essential knowledge
+        to start my new journey. I'm an ambitious, highly motivated and
+        hard-working person, eager to learn new technologies and open to new
+        challenges. Through my previous work experience, I proved myself to be a
+        reliable, well-organized and stress-resistant team-player with strong
+        interpersonal skills. I’d be happy to use all my assets in the role of a
+        junior programmer.
+      </p>
+      <div className={styles.buttonWrapper}>
+        <div className={styles.button}>
+          <Link
+            to={"/projects"}
+            variant="subtitle1"
+            color="secondary"
+            className={styles.link}
+          >
+            see my work
+          </Link>
+        </div>
+      </div>
+    </div>
+    <div className={styles.socialmedia}>
+      <div className={styles.socialmedia}>
+        <p> More on github:</p>
+        <a
+          href="https://github.com/mwladyka126"
+          target="_blanket"
+          className={styles.iconWrapper}
+        >
+          {" "}
+          <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+        </a>
+      </div>{" "}
+      <div className={styles.socialmedia}>
+        <p> Check my linkedIn:</p>{" "}
+        <a
+          href="https://www.linkedin.com/in/malgorzata-wladyka/"
+          target="_blanket"
+          className={styles.iconWrapper}
+        >
+          {" "}
+          <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+        </a>
+      </div>
+    </div>
     <Technologies />
+    <div className={styles.languages}>
+      <h2 className={styles.title}>Languages</h2>
+      <div className={styles.list}>
+        <p> German // fluent </p>
+        <p> English//fluent </p>
+        <p> Polish// native </p>
+        <p> Spanish // advanced </p>
+        <p> Portuguese // basic </p>
+      </div>
+    </div>
+    <div className={styles.interest}>
+      <h2 className={styles.title}>In my free time:</h2>
+      <div className={styles.list}>
+        <p>
+          {" "}
+          Passionate about Latin America, especially Mexico and dancing
+          (urbankiz & kizomba).{" "}
+        </p>
+      </div>
+    </div>
   </div>
 );
 

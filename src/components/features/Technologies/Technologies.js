@@ -19,7 +19,9 @@ import styles from "./Technologies.module.scss";
 
 const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Technologies</h2>
+    <div className={styles.title}>
+      <h2>Technologies</h2>
+    </div>
     <div className={styles.tech}>
       <div className={styles.tech_item}>
         <p> Java Script </p>

@@ -25,7 +25,7 @@ const Component = ({ className, children }) => (
         target="_blanket"
         className={styles.link}
       >
-        <span>.</span>contact<span>( )</span>
+        <span>.</span>contact<span>( '@')</span>
       </a>
     </li>
     <li>
