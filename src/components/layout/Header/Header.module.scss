@@ -11,8 +11,6 @@
     .logo {
       padding: $base-size $base-size * 2;
       position: relative;
-      font-weight: 600;
-
       .link {
         @include link;
         color: $color-text-light;

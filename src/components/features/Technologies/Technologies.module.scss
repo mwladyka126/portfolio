@@ -5,6 +5,7 @@
   .title {
     text-align: center;
     padding-top: $base-size * 2;
+    color: $color-main;
   }
   .tech {
     @include wrapper;
