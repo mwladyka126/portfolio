@@ -4,13 +4,7 @@ import { Technologies } from "./../../features/Technologies/Technologies";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-
 import clsx from "clsx";
-
-// import { connect } from 'react-redux';
-/* import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';*/
-
 import styles from "./About.module.scss";
 
 const Component = ({ className, children }) => (
@@ -85,13 +79,11 @@ const Component = ({ className, children }) => (
     </div>
     <div className={styles.interest}>
       <h2 className={styles.title}>/* When not working: */</h2>
-      <div className={styles.list}>
-        <p>
-          {" "}
-          Passionate about Latin America, especially Mexico and dancing (mostly
-          urbankiz & kizomba).{" "}
-        </p>
-      </div>
+      <p>
+        {" "}
+        Passionate about Latin America, especially Mexico and dancing (mostly
+        urbankiz & kizomba).{" "}
+      </p>
     </div>
   </div>
 );

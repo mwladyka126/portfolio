@@ -3,7 +3,12 @@
 
 .root {
   background-color: $color-background-dark;
-  //background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  background: linear-gradient(
+    to bottom,
+    $color-background-dark 0%,
+    $color-semi-dark 100%
+  );
+
   color: $color-text-light;
   padding: $base-size * 2;
   font-family: $font-text;
@@ -12,6 +17,7 @@
     text-align: center;
     padding: $base-size * 2;
   }
+
   .intro {
     p {
       text-align: justify;
