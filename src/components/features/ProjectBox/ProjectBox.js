@@ -23,7 +23,7 @@ const Component = ({
 }) => (
   <div className={clsx(className, styles.root)}>
     <Grid container spacing={2} className={styles.project}>
-      <Grid item xs={12} sm={4} className={styles.project__imageWrapper}>
+      <Grid item xs={12} sm={6} md={4} className={styles.project__imageWrapper}>
         <CardMedia
           className={styles.image}
           component="img"
@@ -45,12 +45,11 @@ const Component = ({
           </Button>
         </div>
       </Grid>
-      <Grid item xs={12} sm={8} className={styles.project__description}>
-        <h3> Title: </h3>
-        <p>{title} </p>
-        <h3> About: </h3>
+      <Grid item xs={12} sm={6} md={8} className={styles.project__description}>
+        <h2> {title}</h2>
+        <h3> // about: </h3>
         <p>{description}</p>
-        <h3> Technologies: </h3>
+        <h3> // technologies: </h3>
         <p>{technologies} </p>
       </Grid>
     </Grid>

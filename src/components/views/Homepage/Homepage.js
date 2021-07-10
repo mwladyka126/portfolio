@@ -11,8 +11,8 @@ const Component = ({ className, children }) => (
       <h1 className={styles.hello}>Hello world :)</h1>
       <h1 className={styles.me}>
         {" "}
-        I'm <span className={styles.name}> Małgorzata Władyka </span>
-        .replace(/ł/g,l)
+        I'm <span className={styles.name}> Małgorzata Władyka</span>
+        .replace(/ł/g,l);
       </h1>
       <p className={styles.comment}>// about me in 3 words: </p>
       <h1 className={styles.info}> I'm junior web developer.</h1>

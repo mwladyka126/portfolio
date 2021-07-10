@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 import { Technologies } from "./../../features/Technologies/Technologies";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGlobeAmericas,
+  faPepperHot,
+  faShoePrints,
+  faMusic,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import styles from "./About.module.scss";
@@ -10,9 +16,7 @@ import styles from "./About.module.scss";
 const Component = ({ className, children }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.intro}>
-      <h2>
-        <span>/* About me: */</span>
-      </h2>
+      <h2>/* About me: */</h2>
       <p>
         {" "}
         I am lawyer by training and junior web developer by passion,
@@ -68,21 +72,41 @@ const Component = ({ className, children }) => (
     </div>
     <Technologies />
     <div className={styles.languages}>
-      <h2 className={styles.title}>/* Languages: */</h2>
+      <h2>/* Languages: */</h2>
       <div className={styles.list}>
-        <p> German // fluent </p>
-        <p> English //fluent </p>
-        <p> Polish // native </p>
-        <p> Spanish // advanced </p>
-        <p> Portuguese // basic </p>
+        <p>
+          {" "}
+          German <span>// fluent </span>
+        </p>
+        <p>
+          {" "}
+          English <span>// fluent </span>{" "}
+        </p>
+        <p>
+          {" "}
+          Polish <span>// native </span>{" "}
+        </p>
+        <p>
+          {" "}
+          Spanish <span>// advanced </span>{" "}
+        </p>
+        <p>
+          {" "}
+          Portuguese <span>// basic </span>
+        </p>
       </div>
     </div>
-    <div className={styles.interest}>
-      <h2 className={styles.title}>/* When not working: */</h2>
+    <div className={styles.passions}>
+      <h2>/* Also passionate about */</h2>
       <p>
         {" "}
-        Passionate about Latin America, especially Mexico and dancing (mostly
-        urbankiz & kizomba).{" "}
+        Latin America{" "}
+        <FontAwesomeIcon icon={faGlobeAmericas} className={styles.icon} />(
+        especially <span> Mexico </span>{" "}
+        <FontAwesomeIcon icon={faPepperHot} className={styles.icon} />) and
+        dancing <FontAwesomeIcon icon={faMusic} className={styles.icon} />
+        (mostly <span>urbankiz & kizomba </span>).
+        <FontAwesomeIcon icon={faShoePrints} className={styles.icon} />{" "}
       </p>
     </div>
   </div>
@@ -93,18 +117,4 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
-export {
-  Component as About,
-  // Container as About,
-  Component as AboutComponent,
-};
+export { Component as About, Component as AboutComponent };

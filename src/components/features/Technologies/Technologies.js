@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { ReactComponent as BoostrapLogo } from "./../../../logos/bootstrap.svg";
 import { ReactComponent as CssLogo } from "./../../../logos/css.svg";
 import { ReactComponent as Html5Logo } from "./../../../logos/html5.svg";
-import { ReactComponent as GithubLogo } from "./../../../logos/github.svg";
 import { ReactComponent as JsLogo } from "./../../../logos/js.svg";
 import { ReactComponent as MaterialUILogo } from "./../../../logos/materialUI.svg";
 import { ReactComponent as MongoLogo } from "./../../../logos/mongodb.svg";
@@ -12,6 +11,8 @@ import { ReactComponent as ReactLogo } from "./../../../logos/react.svg";
 import { ReactComponent as ReduxLogo } from "./../../../logos/redux.svg";
 import { ReactComponent as SassLogo } from "./../../../logos/sass.svg";
 import { ReactComponent as WebpackLogo } from "./../../../logos/webpack.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodeBranch } from "@fortawesome/free-solid-svg-icons";
 
 import clsx from "clsx";
 
@@ -64,6 +65,10 @@ const Component = ({ className }) => (
       <div className={styles.tech_item}>
         <p>MongoDB</p>
         <MongoLogo className={styles.icon} />
+      </div>
+      <div className={styles.tech_item}>
+        <p>Git</p>
+        <FontAwesomeIcon icon={faCodeBranch} className={styles.icon} />
       </div>
     </div>
   </div>
