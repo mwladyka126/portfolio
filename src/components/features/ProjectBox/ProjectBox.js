@@ -67,18 +67,7 @@ Component.propTypes = {
   image: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
-
 export {
   Component as ProjectBox,
-  // Container as ProjectBox,
   Component as ProjectBoxComponent,
 };

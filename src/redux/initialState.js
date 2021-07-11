@@ -10,7 +10,7 @@ export const initialState = {
           "HTML, CSS, SASS, JS, React, React-Router, Redux, Redux-Thunk, Axios, Material UI, Express, MongoDB, Mongoose",
         code: "https://github.com/mwladyka126/REALMexico",
         link: "https://realmexico.herokuapp.com/",
-        image: "/images/projects/realmex.jpg",
+        image: "/images/projects/realmexico.jpg",
       },
 
       {
@@ -30,8 +30,8 @@ export const initialState = {
         description:
           "Complex website for furniture store built with React as a group project of 7 developers under supervison of the project manager. Work organised in kanban system, using Jira, including dailies, weeklies and mutual code review.",
         technologies: "HTML, CSS, SASS, JS, React, React-Router, Redux",
-        code: "https://github.com/mwladyka126/wdp-furniture-shop",
-        link: "",
+        code: "https://github.com/mwladyka126/bazar",
+        link: "https://furniture-bazar.herokuapp.com/",
         image: "/images/projects/bazar.jpg",
       },
       {
@@ -64,6 +64,26 @@ export const initialState = {
         code: "https://github.com/mwladyka126/administration-panel",
         link: "https://mwladyka126.github.io/administration-panel",
         image: "/images/projects/adminpanel.jpg",
+      },
+      {
+        id: "7",
+        title: "Pizzeria",
+        description:
+          "Single Page Application of italian restaurant, written with Vanilla Java Script, following object-oriented programming (OOP) concept, using Handlebars templates for rendering products,   applying AJAX and API for sending orders. ",
+        technologies: "HTML, SCSS, JS",
+        code: "https://github.com/mwladyka126/project-pizzeria",
+        link: "https://immense-stream-68720.herokuapp.com/",
+        image: "/images/projects/pizzeria.jpg",
+      },
+      {
+        id: "8",
+        title: "Portfolio",
+        description:
+          "My portfolio website where you can see the projected I worked on so far and get to know me better.Project created with React, maintaing app state in Redux, applying React-Router for routing. ",
+        technologies: " HTML, CSS, SASS, JS, React, React-Router, Redux",
+        code: "https://github.com/mwladyka126/portfolio",
+        link: "https://mwladyka-portfolio.herokuapp.com/",
+        image: "/images/projects/portfolio.jpg",
       },
     ],
   },
