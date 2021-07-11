@@ -6,7 +6,6 @@ import { ProjectBox } from "../../features/ProjectBox/ProjectBox";
 import clsx from "clsx";
 
 import { connect } from "react-redux";
-import { getAllProjects } from "../../../redux/projectsRedux.js";
 
 import styles from "./Projects.module.scss";
 
@@ -32,7 +31,7 @@ Component.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  projects: getAllProjects(state),
+  projects: state.projects.data,
 });
 
 const Container = connect(mapStateToProps)(Component);
