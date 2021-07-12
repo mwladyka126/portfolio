@@ -104,7 +104,8 @@ const Component = ({ className, children }) => (
         <FontAwesomeIcon icon={faGlobeAmericas} className={styles.icon} />(
         especially <span> Mexico </span>{" "}
         <FontAwesomeIcon icon={faPepperHot} className={styles.icon} />) and
-        dancing <FontAwesomeIcon icon={faMusic} className={styles.icon} />
+        social dancing{" "}
+        <FontAwesomeIcon icon={faMusic} className={styles.icon} />
         (mostly <span>urbankiz & kizomba </span>).
         <FontAwesomeIcon icon={faShoePrints} className={styles.icon} />{" "}
       </p>
