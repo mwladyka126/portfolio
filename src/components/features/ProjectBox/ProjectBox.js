@@ -47,7 +47,7 @@ const Component = ({
       </Grid>
       <Grid item xs={12} sm={6} md={8} className={styles.project__description}>
         <h2> {title}</h2>
-        <h3> // about: </h3>
+        <h3> // about the project: </h3>
         <p>{description}</p>
         <h3> // technologies: </h3>
         <p>{technologies} </p>
@@ -67,7 +67,4 @@ Component.propTypes = {
   image: PropTypes.string,
 };
 
-export {
-  Component as ProjectBox,
-  Component as ProjectBoxComponent,
-};
+export { Component as ProjectBox, Component as ProjectBoxComponent };

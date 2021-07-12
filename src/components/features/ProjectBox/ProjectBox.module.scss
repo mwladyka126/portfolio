@@ -2,7 +2,7 @@
 @import "../../../styles/mixins.scss";
 
 .root {
-  margin: $base-size * 2;
+  margin: $base-size;
   background-color: $color-background-dark;
   font-size: 14px;
   font-family: $font-text;
@@ -26,7 +26,7 @@
         text-align: center;
         .button {
           height: 35px;
-          min-width: 100px;
+          width: max-content;
           margin: $base-size;
           font-weight: 400;
           background-color: $color-main-darker;
@@ -41,7 +41,7 @@
             font-weight: 600;
             color: $color-background-light;
             .icon {
-              font-size: $base-size * 2;
+              font-size: $base-size * 1.5;
               margin-left: 5px;
             }
           }
@@ -61,5 +61,15 @@
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 340px) {
+  .project {
+    padding: 0 !important;
+    h2,
+    h3 {
+      text-align: center;
+    }
+    .buttons {
+      justify-content: center !important;
+    }
+  }
 }

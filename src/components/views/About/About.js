@@ -19,7 +19,9 @@ const Component = ({ className, children }) => (
       <h2>/* About me: */</h2>
       <p>
         {" "}
-        I am lawyer by training and junior web developer by passion,
+        I am lawyer by training and{" "}
+        <span className={styles.junior}>junior web developer</span>{" "}
+        <span className={styles.passion}> by passion </span>
         systematically programming, on both front- and back-end stack since
         2020. For a long time I’ve been fascinated by the endless possibilities
         of the IT world, dipping my toes into office software applications in
@@ -101,12 +103,12 @@ const Component = ({ className, children }) => (
       <p>
         {" "}
         Latin America{" "}
-        <FontAwesomeIcon icon={faGlobeAmericas} className={styles.icon} />(
+        <FontAwesomeIcon icon={faGlobeAmericas} className={styles.icon} /> (
         especially <span> Mexico </span>{" "}
-        <FontAwesomeIcon icon={faPepperHot} className={styles.icon} />) and
+        <FontAwesomeIcon icon={faPepperHot} className={styles.pepper} />) and
         social dancing{" "}
         <FontAwesomeIcon icon={faMusic} className={styles.icon} />
-        (mostly <span>urbankiz & kizomba </span>).
+        (mostly <span>urbankiz</span> & <span> kizomba </span>).
         <FontAwesomeIcon icon={faShoePrints} className={styles.icon} />{" "}
       </p>
     </div>

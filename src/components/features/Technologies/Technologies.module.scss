@@ -4,7 +4,7 @@
 .root {
   .title {
     text-align: center;
-    padding-top: $base-size * 2;
+    padding-top: $base-size * 2 0;
     color: $color-main;
   }
   .tech {
@@ -34,5 +34,8 @@
 @media (max-width: 585px) {
   .tech {
     justify-content: space-around !important;
+    &_item {
+      padding: $base-size !important;
+    }
   }
 }

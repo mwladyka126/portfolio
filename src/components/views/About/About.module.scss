@@ -17,7 +17,7 @@
   h2 {
     color: $color-main;
     text-align: center;
-    padding: $base-size * 2;
+    padding: $base-size * 2 0;
   }
   span {
     color: $color-main-darker;
@@ -26,6 +26,15 @@
   .intro {
     p {
       text-align: justify;
+      .junior {
+        letter-spacing: 2px;
+        text-decoration: underline;
+        color: $color-text-light;
+        font-size: 18px;
+      }
+      .passion {
+        color: $color-error;
+      }
     }
     .buttonWrapper {
       display: flex;
@@ -55,6 +64,7 @@
       justify-content: flex-start;
       .iconWrapper {
         padding: 0 $base-size;
+
         .icon {
           font-size: large;
           color: $color-main;
@@ -71,6 +81,9 @@
     .list {
       @include wrapper;
       justify-content: space-around;
+      p {
+        padding: 0 $base-size;
+      }
     }
   }
   .passions {
@@ -79,6 +92,9 @@
     }
     .icon {
       color: $color-main-darker;
+    }
+    .pepper {
+      color: $color-error;
     }
   }
 }
