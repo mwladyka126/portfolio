@@ -1,5 +1,5 @@
 # Małgorzata Władyka Portfolio
 
-### To see the project visit:
+### To see my work go to:
 
 https://mwladyka-portfolio.herokuapp.com/
